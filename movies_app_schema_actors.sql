@@ -1,0 +1,11 @@
+INSERT INTO movies_app_schema.actors (name) VALUES ('TomCruise');
+INSERT INTO movies_app_schema.actors (name) VALUES ('BradPitt');
+INSERT INTO movies_app_schema.actors (name) VALUES ('SandraBullock');
+INSERT INTO movies_app_schema.actors (name) VALUES ('JenniferAniston');
+INSERT INTO movies_app_schema.actors (name) VALUES ('JimCarrey');
+INSERT INTO movies_app_schema.actors (name) VALUES ('JackNicholson');
+INSERT INTO movies_app_schema.actors (name) VALUES ('HeathLedger');
+INSERT INTO movies_app_schema.actors (name) VALUES ('СергейГармаш');
+INSERT INTO movies_app_schema.actors (name) VALUES ('НикитаМихалков');
+INSERT INTO movies_app_schema.actors (name) VALUES ('КонстантинХабенский');
+INSERT INTO movies_app_schema.actors (name) VALUES ('RichardGere');

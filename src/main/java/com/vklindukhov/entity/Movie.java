@@ -1,24 +1,34 @@
 package com.vklindukhov.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Entity
 @Table(name = "movies")
-public final class Movie {
+@XmlRootElement(name = "player")
+public final class Movie implements SearchEntity {
     @Id
     @GeneratedValue
     private Long id;
+    @XmlElement
     private String title;
+    @XmlElement
     private String description;
+    @XmlElement
     private String categoryName;
+    @XmlElement
     private Short releaseYear;
+    @XmlElement
     private String languageName;
+    @XmlElement
     private Short length;
+    @XmlElement
     private Float rating;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "movie_actors")
+    @XmlElement
     private List<Actor> actors;
 
     public Movie(String title, String description, String categoryName, String languageName, List<Actor> actors) {

@@ -1,7 +1,6 @@
 package com.vklindukhov.dao;
 
 import com.vklindukhov.entity.Movie;
-import com.vklindukhov.entity.Actor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

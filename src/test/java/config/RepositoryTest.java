@@ -2,9 +2,7 @@ package config;
 
 import com.vklindukhov.dao.MovieRepository;
 import com.vklindukhov.dao.SearchLogRepository;
-import com.vklindukhov.entity.Actor;
-import com.vklindukhov.entity.Movie;
-import com.vklindukhov.entity.SearchLog;
+import com.vklindukhov.entity.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +16,10 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import javax.transaction.Transactional;
 import java.util.*;
 
+import static com.vklindukhov.entity.Category.ADVENTURE;
+import static com.vklindukhov.entity.Category.CRIME;
+import static com.vklindukhov.entity.Category.DRAM;
+import static com.vklindukhov.entity.Language.RUSSIAN;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -38,8 +40,8 @@ public class RepositoryTest {
         Movie durak = new Movie(
                 "Дурак",
                 "Дурак Description",
-                "Dram",
-                "Russian",
+                DRAM.name,
+                RUSSIAN.name,
                 Arrays.asList(new Actor("Артём Быстров"), new Actor("Наталья Суркова"))
         );
         durak.setReleaseYear((short) 2014);
@@ -49,8 +51,8 @@ public class RepositoryTest {
         Movie kollektor = new Movie(
                 "Коллектор",
                 "Коллектор Description",
-                "Dram",
-                "Russian",
+                DRAM.name,
+                RUSSIAN.name,
                 Collections.singletonList(new Actor("Константин Хабенский")));
         kollektor.setReleaseYear((short) 2016);
         kollektor.setLength((short) 4382);
@@ -59,8 +61,8 @@ public class RepositoryTest {
         Movie duelant = new Movie(
                 "Дуэлянт",
                 "Дуэлянт Description",
-                "Adventure",
-                "Russian",
+                ADVENTURE.name,
+                RUSSIAN.name,
                 Arrays.asList(new Actor("Пётр Фёдоров"), new Actor("Владимир Машков"), new Actor("Юлия Хлынина"), new Actor("Сергей Гармаш")
                 )
         );
@@ -71,8 +73,8 @@ public class RepositoryTest {
         Movie bespredel = new Movie(
                 "Беспредел",
                 "Беспредел Description",
-                "Crime",
-                "Russian",
+                CRIME.name,
+                RUSSIAN.name,
                 Arrays.asList(new Actor("Лев Дуров"), new Actor("Сергей Гармаш"), new Actor("Виктор Павлов"))
         );
         bespredel.setReleaseYear((short) 1989);

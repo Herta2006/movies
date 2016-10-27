@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "actors")
-public class Actor {
+public class Actor implements SearchEntity {
     @Id
     @GeneratedValue
     private Long id;

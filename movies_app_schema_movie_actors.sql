@@ -1,0 +1,12 @@
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (5, 11);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (5, 3);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (1, 1);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (1, 2);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (1, 3);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (1, 11);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (2, 5);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (3, 6);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (4, 7);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (3, 8);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (4, 9);
+INSERT INTO movies_app_schema.movie_actors (movies_id, actors_id) VALUES (4, 10);

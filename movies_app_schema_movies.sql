@@ -1,0 +1,5 @@
+INSERT INTO movies_app_schema.movies (categoryName, description, languageName, length, rating, releaseYear, title) VALUES ('Dram', 'Durak Description', 'Russian', 7555, 7.8, 2014, 'Durak');
+INSERT INTO movies_app_schema.movies (categoryName, description, languageName, length, rating, releaseYear, title) VALUES ('Dram', 'Duelant Description', 'Russian', 6583, 7.1, 2016, 'Duelant');
+INSERT INTO movies_app_schema.movies (categoryName, description, languageName, length, rating, releaseYear, title) VALUES ('Crime', 'Bespredel Description', 'Russian', 6243, 7.3, 1989, 'Bespredel');
+INSERT INTO movies_app_schema.movies (categoryName, description, languageName, length, rating, releaseYear, title) VALUES ('Crime', 'Snatch Description', 'English', 6351, 8.3, 2000, 'Snatch');
+INSERT INTO movies_app_schema.movies (categoryName, description, languageName, length, rating, releaseYear, title) VALUES ('Romantic Comedy', 'Pretty Woman Description', 'English', 6315, 8, 1990, 'Pretty Woman');
