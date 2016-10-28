@@ -1,6 +1,9 @@
 package com.vklindukhov.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Entity
@@ -8,10 +11,15 @@ import java.util.List;
 public class Actor implements SearchEntity {
     @Id
     @GeneratedValue
+    @JsonIgnore
     private Long id;
     private String name;
-    @ManyToMany(mappedBy = "actors")
+    @ManyToMany(mappedBy = "actors", fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<Movie> movies;
+
+    public Actor() {
+    }
 
     public Actor(String name) {
         this.name = name;

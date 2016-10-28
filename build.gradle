@@ -42,10 +42,10 @@ dependencies {
     compile 'org.springframework.data:spring-data-jpa:1.10.4.RELEASE'
     compile 'org.springframework:spring-orm:2.5.1'
 
-    compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.8.4'
 
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile 'javax.servlet:jstl:1.2'
     compile 'org.javassist:javassist:3.15.0-GA'
@@ -53,11 +53,6 @@ dependencies {
     compile 'org.hibernate:hibernate-entitymanager:4.3.6.Final'
     compile 'commons-dbcp:commons-dbcp:1.4'
     compile 'mysql:mysql-connector-java:5.1.31'
-
-//    compile 'org.glassfish.jersey.archetypes:jersey-quickstart-webapp:2.16'
-//    compile 'org.glassfish.jersey.containers:jersey-container-servlet-core:2.16'
-//    compile 'org.glassfish.jersey:jersey-bom:2.16'
-//    compile 'org.glassfish.jersey.media:jersey-media-moxy:2.16'
 
     testCompile 'junit:junit:4.12'
     compile 'org.springframework:spring-test:4.3.3.RELEASE'

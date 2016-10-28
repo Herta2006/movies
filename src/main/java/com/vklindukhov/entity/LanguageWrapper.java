@@ -4,7 +4,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlValue;
 
-@XmlRootElement(name = "language")
 public final class LanguageWrapper implements SearchEntity {
     private final Language language;
 
@@ -12,12 +11,10 @@ public final class LanguageWrapper implements SearchEntity {
         this.language = language;
     }
 
-    @XmlValue
-    public String getValue() {
+    public String getName() {
         return language.name;
     }
 
-    @XmlAttribute
     public Language getLanguage() {
         return language;
     }

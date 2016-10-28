@@ -23,7 +23,7 @@ public class SearchServiceImpl implements SearchService {
     private SearchLogRepository searchLogRepository;
 
     @Override
-    public void findMovies(String userFacebookIdWhoAsk, String str) {
+    public List<Movie> findMovies(String userFacebookIdWhoAsk, String str) {
         Date time = new Date();
         List<Movie> found = movieRepository.find(str);
         SearchLog entity = new SearchLog();
@@ -33,6 +33,7 @@ public class SearchServiceImpl implements SearchService {
         entity.setFieldsToSearch(Arrays.asList("title", "description", "category_name", "language_name", "actor_name"));
         entity.setFoundMovies(found);
         SearchLog saved = searchLogRepository.save(entity);
+        return found;
     }
 
     @Override

@@ -1,11 +1,12 @@
 package com.vklindukhov.service;
 
+import com.vklindukhov.entity.Movie;
 import com.vklindukhov.entity.SearchEntity;
 
 import java.util.List;
 
 public interface SearchService {
-    void findMovies(String userFacebookIdWhoAsk, String str);
+    List<Movie> findMovies(String userFacebookIdWhoAsk, String str);
 
     List<? extends SearchEntity> findAll(Class<? extends SearchEntity> clazz);
 

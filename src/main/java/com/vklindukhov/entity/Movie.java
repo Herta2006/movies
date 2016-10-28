@@ -1,5 +1,7 @@
 package com.vklindukhov.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -7,29 +9,24 @@ import java.util.List;
 
 @Entity
 @Table(name = "movies")
-@XmlRootElement(name = "player")
 public final class Movie implements SearchEntity {
     @Id
     @GeneratedValue
+    @JsonIgnore
     private Long id;
-    @XmlElement
     private String title;
-    @XmlElement
     private String description;
-    @XmlElement
     private String categoryName;
-    @XmlElement
     private Short releaseYear;
-    @XmlElement
     private String languageName;
-    @XmlElement
     private Short length;
-    @XmlElement
     private Float rating;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "movie_actors")
-    @XmlElement
     private List<Actor> actors;
+
+    public Movie() {
+    }
 
     public Movie(String title, String description, String categoryName, String languageName, List<Actor> actors) {
         this.title = title;
