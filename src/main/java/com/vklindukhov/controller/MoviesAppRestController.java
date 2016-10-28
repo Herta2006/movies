@@ -131,4 +131,16 @@ public class MoviesAppRestController {
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
 
+
+    //-------------------Find Movies by String--------------------------------------------------------
+
+    @RequestMapping(value = "/movies/search/{searchStr}", method = RequestMethod.GET, produces = MediaType.APPLICATION_XML_VALUE)
+    public ResponseEntity<List<Movie>> movies(@PathVariable("searchStr") String str) {
+        System.out.println("Searching Movies by keyword: " + str);
+        List<Movie> movies = searchService.findMovies("DefaulUserId", str);
+        if (movies.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(movies, HttpStatus.OK);
+    }
 }
