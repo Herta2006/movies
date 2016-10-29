@@ -208,8 +208,6 @@ public class RepositoryTest {
 
     @After
     public void clean() {
-        searchLogRepository.deleteAll();
         movieRepository.deleteAll();
-        actorRepository.deleteAll();
     }
 }
