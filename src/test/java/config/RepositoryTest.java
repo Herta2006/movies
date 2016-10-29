@@ -1,11 +1,10 @@
 package config;
 
+import com.vklindukhov.dao.ActorRepository;
 import com.vklindukhov.dao.MovieRepository;
 import com.vklindukhov.dao.SearchLogRepository;
 import com.vklindukhov.entity.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
@@ -28,6 +27,8 @@ import static org.junit.Assert.assertEquals;
 @WebAppConfiguration
 public class RepositoryTest {
 
+    @Autowired
+    private ActorRepository actorRepository;
     @Autowired
     private MovieRepository movieRepository;
     @Autowired
@@ -207,6 +208,8 @@ public class RepositoryTest {
 
     @After
     public void clean() {
+        searchLogRepository.deleteAll();
         movieRepository.deleteAll();
+        actorRepository.deleteAll();
     }
 }
