@@ -114,14 +114,14 @@ public class RepositoryTest {
         assertEquals("Дурак Description", found.getDescription());
     }
 
-//    @Test
-//    public void testFindByName() {
-//        List<Movie> list = movieRepository.findByTitle("Дурак");
-//        assertEquals(1, list.size());
-//        Movie foundDurak = list.get(0);
-//        assertEquals("Дурак", foundDurak.getTitle());
-//        assertEquals("Дурак Description", foundDurak.getDescription());
-//    }
+    @Test
+    public void testFindByName() {
+        List<Movie> list = movieRepository.findByTitle("Дурак");
+        assertEquals(1, list.size());
+        Movie foundDurak = list.get(0);
+        assertEquals("Дурак", foundDurak.getTitle());
+        assertEquals("Дурак Description", foundDurak.getDescription());
+    }
 
     @Test
     public void testFindByDescription() {
@@ -150,16 +150,16 @@ public class RepositoryTest {
         }
     }
 
-    @Test
-    public void testFindByActorName() {
-        List<Movie> list = movieRepository.findByActorsName("Сергей Гармаш");
-        list.forEach(System.out::println);
-        assertEquals(2, list.size());
-        for (Movie movie : list) {
-            long count = movie.getActors().stream().filter(x -> "Сергей Гармаш".equals(x.getName())).count();
-            assertEquals(1, count);
-        }
-    }
+//    @Test
+//    public void testFindByActorName() {
+//        List<Movie> list = movieRepository.findByActorsName("Сергей Гармаш");
+//        list.forEach(System.out::println);
+//        assertEquals(2, list.size());
+//        for (Movie movie : list) {
+//            long count = movie.getActors().stream().filter(x -> "Сергей Гармаш".equals(x.getName())).count();
+//            assertEquals(1, count);
+//        }
+//    }
 
     @Test
     public void testFindAllSearchLogs() {
