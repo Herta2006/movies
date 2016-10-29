@@ -114,14 +114,14 @@ public class RepositoryTest {
         assertEquals("Дурак Description", found.getDescription());
     }
 
-    @Test
-    public void testFindByName() {
-        List<Movie> list = movieRepository.findByTitle("Дурак");
-        assertEquals(1, list.size());
-        Movie foundDurak = list.get(0);
-        assertEquals("Дурак", foundDurak.getTitle());
-        assertEquals("Дурак Description", foundDurak.getDescription());
-    }
+//    @Test
+//    public void testFindByName() {
+//        List<Movie> list = movieRepository.findByTitle("Дурак");
+//        assertEquals(1, list.size());
+//        Movie foundDurak = list.get(0);
+//        assertEquals("Дурак", foundDurak.getTitle());
+//        assertEquals("Дурак Description", foundDurak.getDescription());
+//    }
 
     @Test
     public void testFindByDescription() {
