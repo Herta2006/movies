@@ -152,6 +152,7 @@ public class RepositoryTest {
     @Test
     public void testFindByActorName() {
         List<Movie> list = movieRepository.findByActorsName("Сергей Гармаш");
+        list.forEach(System.out::println);
         assertEquals(2, list.size());
         for (Movie movie : list) {
             long count = movie.getActors().stream().filter(x -> "Сергей Гармаш".equals(x.getName())).count();

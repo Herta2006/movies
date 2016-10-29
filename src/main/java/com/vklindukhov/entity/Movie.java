@@ -3,8 +3,6 @@ package com.vklindukhov.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Entity
@@ -124,4 +122,18 @@ public final class Movie implements SearchEntity {
         return id != null ? id.hashCode() : 0;
     }
 
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", categoryName='" + categoryName + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", languageName='" + languageName + '\'' +
+                ", length=" + length +
+                ", rating=" + rating +
+                ", actors=" + actors.stream().map(Object::toString).reduce("", String::concat) +
+                '}';
+    }
 }
